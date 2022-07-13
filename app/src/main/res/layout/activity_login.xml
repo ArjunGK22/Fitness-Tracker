@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:background="@color/black1">
+
+
+
+    <RelativeLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp">
+
+
+
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome\nBack"
+            android:textSize="40dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/nova_extrabold"
+            android:textStyle="bold"
+            android:textColor="@color/yellow" />
+
+
+        <TextView
+            android:layout_below="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in to Continue"
+            android:layout_marginLeft="15dp"
+           android:fontFamily="@font/roboto_bold"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/textfields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_below="@id/header_title">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:padding="5dp"
+        android:fontFamily="@font/nexa_bold"
+        android:textColor="@color/yellow"
+        android:textSize="18dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/usernameet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the user Name"
+        android:textColor="@color/white"
+        android:singleLine="true"
+        android:backgroundTint="@color/yellow"
+        android:inputType="textEmailAddress"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:fontFamily="@font/nexa_bold"
+        android:padding="5dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/passwordet"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the password"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/yellow"
+        android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textfields">
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/nexa_bold"
+            android:minWidth="250dp"
+            android:padding="15dp"
+            android:text="LOGIN"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:elevation="30dp"
+            android:background="@drawable/progress_circle"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/yellow" />
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/signuptv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="New User? Sign Up"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/yellow"
+        android:textSize="16dp"/>
+
+
+
+</RelativeLayout>

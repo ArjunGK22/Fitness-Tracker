@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Health Kit</string>
+
+    <string-array name="spinner_activity">Activity
+        <item>Little or No Activity</item>
+        <item>Lightly Active</item>
+        <item>Moderately Active</item>
+        <item>Very Active</item>
+    </string-array>
+</resources>

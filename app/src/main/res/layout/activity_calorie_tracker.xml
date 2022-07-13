@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalorieTracker"
+    android:background="@color/black1">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/header"
+        android:layout_marginBottom="20dp">
+
+        <ImageButton
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_margin="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Track Calories"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="@color/black2"
+            android:fontFamily="@font/nova_extrabold"
+            android:layout_margin="15dp" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:cpb_background_progressbar_color="@color/white"
+            app:cpb_background_progressbar_width="10dp"
+            app:cpb_progress_max="2500"
+            app:cpb_progressbar_color="@color/darkorange"
+            app:cpb_progressbar_width="15dp"
+            app:cpb_round_border="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"/>
+
+        <TextView
+            android:id="@+id/consumed_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="50dp"
+            android:textColor="@color/candy"
+            android:fontFamily="@font/nexa_bold"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/total_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/ 2500"
+            android:layout_below="@+id/consumed_calories"
+            android:layout_centerInParent="true"
+            android:textSize="25dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black2"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/morning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@+id/header"
+        android:background="@drawable/calories"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/morn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Breakfast"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/ic_baseline_lunch_dining_24"
+            android:drawablePadding="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/mdecrement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_remove_circle_24"
+                android:background="@null"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/morningtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cal"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+            <ImageButton
+                android:id="@+id/mincrement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_circle_24"
+                android:background="@null"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lunch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@+id/morning"
+        android:background="@drawable/calories"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/lun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunch"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/ic_baseline_dinner_dining_24"
+            android:drawablePadding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ldecrement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_remove_circle_24"
+                android:background="@null"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/lunchtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cal"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+            <ImageButton
+                android:id="@+id/lincrement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_circle_24"
+                android:background="@null"
+                android:layout_margin="5dp"/>
+
+
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/snacks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@+id/lunch"
+        android:background="@drawable/calories"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/sna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snacks"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/ic_baseline_coffee_24"
+            android:drawablePadding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/sdecrement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_remove_circle_24"
+                android:background="@null"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/snackstv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/snac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cal"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+            <ImageButton
+                android:id="@+id/sincrement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_circle_24"
+                android:background="@null"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@+id/snacks"
+        android:background="@drawable/calories"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/din"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dinner"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/ic_baseline_brunch_dining_24"
+            android:drawablePadding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ddecrement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_remove_circle_24"
+                android:background="@null"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/dinnertv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/dnr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cal"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+            <ImageButton
+                android:id="@+id/dincrement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_circle_24"
+                android:background="@null"
+                android:layout_margin="5dp"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/trackCaloriesbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Track Calories"
+        android:textColor="@color/black2"
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_baseline_dining_24"
+        android:background="@drawable/button_shape"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:minWidth="250dp"
+        android:fontFamily="@font/novo_alt_bold"/>
+
+
+
+
+</RelativeLayout>

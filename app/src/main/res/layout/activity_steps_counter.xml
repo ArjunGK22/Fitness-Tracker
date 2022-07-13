@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StepsCounter"
+    android:background="@color/black1">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:background="@color/yellow"
+        android:layout_marginBottom="20dp">
+
+        <ImageButton
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:background="@null"
+            android:layout_margin="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calories Burned"
+            android:textSize="30dp"
+            android:textColor="@color/black2"
+            android:fontFamily="@font/nova_extrabold"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="15dp">
+
+           <com.mikhaellopez.circularprogressbar.CircularProgressBar
+               android:id="@+id/progress_circular"
+               android:layout_width="220dp"
+               android:layout_height="220dp"
+               android:layout_centerHorizontal="true"
+               app:cpb_background_progressbar_color="@color/white"
+               app:cpb_background_progressbar_width="10dp"
+               app:cpb_progress_max="10000"
+               app:cpb_progressbar_color="@color/candy"
+               app:cpb_progressbar_width="20dp"
+               app:cpb_round_border="true"
+               android:layout_marginBottom="15dp"/>
+
+
+           <TextView
+               android:id="@+id/total_stepstv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="0"
+               android:layout_centerInParent="true"
+               android:textColor="@color/candy"
+               android:fontFamily="@font/nexa_bold"
+               android:textSize="60dp"/>
+       </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:layout_marginTop="50dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:rowCount="1"
+            android:columnCount="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_margin="10dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_local_fire_department_24"/>
+
+                    <TextView
+                        android:id="@+id/caloriestv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/novo_alt_bold"
+                        android:textColor="@color/candy"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Calories Burned"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="@color/creame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_margin="10dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_directions_run_24"/>
+
+                    <TextView
+                        android:id="@+id/distancetv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/novo_alt_bold"
+                        android:textColor="@color/waterblue"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distance Covered"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardview">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/track_bcal_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cornerRadius="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="GO"
+            android:textSize="18dp"
+            android:textStyle="italic"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle_btn_shape"/>
+
+    </RelativeLayout>
+</RelativeLayout>

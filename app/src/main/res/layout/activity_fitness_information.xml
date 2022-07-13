@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FitnessInformation"
+    android:background="@color/black1">
+
+    <RelativeLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/yellow">
+
+        <ImageButton
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fitness Details"
+            android:layout_toEndOf="@id/backbtn"
+            android:textSize="25dp"
+            android:textColor="@color/black2"
+            android:textStyle="bold"
+            android:layout_centerVertical="true" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Activity"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="25dp"/>
+
+            <EditText
+                android:id="@+id/activityet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:hint="Enter Weight"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_directions_bike_24"
+                android:drawablePadding="10dp"
+                android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:layout_marginTop="25dp"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/heightet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_accessibility_24"
+                android:drawablePadding="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Weight"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="25dp"/>
+
+            <EditText
+                android:id="@+id/weightet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_self_improvement_24"
+                android:drawablePadding="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age (in years)"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="25dp"/>
+
+            <EditText
+                android:id="@+id/ageet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_self_improvement_24"
+                android:drawablePadding="10dp"/>
+
+            <TextView
+                android:id="@+id/bmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMI"
+                android:padding="5dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/bmiet"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_baseline_linear_scale_24"
+                android:drawablePadding="10dp"
+                android:background="@drawable/textbox_rect"
+                android:inputType="none"
+                android:enabled="false"/>
+
+            <TextView
+                android:id="@+id/bmr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMR"
+                android:padding="5dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/bmret"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_baseline_linear_scale_24"
+                android:drawablePadding="10dp"
+                android:background="@drawable/textbox_rect"
+                android:inputType="none"
+                android:enabled="false"/>
+
+
+            <TextView
+                android:id="@+id/amr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active Metabolic Rate "
+                android:padding="5dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/amret"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_baseline_linear_scale_24"
+                android:drawablePadding="10dp"
+                android:background="@drawable/textbox_rect"
+                android:inputType="none"
+                android:enabled="false"/>
+
+
+            <TextView
+                android:id="@+id/fat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Body Fat Percent"
+                android:padding="5dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/fatpercentet"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_baseline_linear_scale_24"
+                android:drawablePadding="10dp"
+                android:background="@drawable/textbox_rect"
+                android:inputType="none"
+                android:enabled="false"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/calculatebtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calculate"
+            android:layout_margin="5dp"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/updatebtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Update"
+            android:layout_margin="5dp"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

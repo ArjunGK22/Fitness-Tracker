@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExtraDetails"
+    android:background="@color/black1">
+
+    <RelativeLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/yellow"
+        android:padding="25dp"
+        android:elevation="20dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Result"
+            android:textSize="40dp"
+            android:textColor="@color/black2"
+            android:textStyle="bold"
+            android:fontFamily="@font/nova_extrabold"
+            android:drawableStart="@drawable/ic_baseline_content_paste_24"
+            android:drawableTint="@color/black2"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"/>
+
+
+    </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_below="@id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+
+
+        <TextView
+            android:id="@+id/bmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI"
+            android:padding="5dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/yellow"
+            android:fontFamily="@font/nexa_bold"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:id="@+id/bmiet"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:drawableStart="@drawable/ic_baseline_linear_scale_24"
+            android:drawablePadding="10dp"
+            android:background="@drawable/textbox_rect"
+            android:inputType="none"
+            android:enabled="false"
+            android:textColor="@color/yellow"/>
+
+        <TextView
+            android:id="@+id/bmr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basal Metabolic Rate (BMR)"
+            android:padding="5dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/yellow"
+            android:fontFamily="@font/nexa_bold"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:id="@+id/bmret"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:drawableStart="@drawable/ic_baseline_fitness_center_24"
+            android:drawablePadding="10dp"
+            android:background="@drawable/textbox_rect"
+            android:inputType="none"
+            android:enabled="false"
+            android:textColor="@color/yellow"/>
+
+
+        <TextView
+            android:id="@+id/amr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active Metabolic Rate (AMR)"
+            android:padding="5dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/yellow"
+            android:fontFamily="@font/nexa_bold"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:id="@+id/amret"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:drawableStart="@drawable/ic_baseline_directions_run_yellow"
+            android:drawablePadding="10dp"
+            android:background="@drawable/textbox_rect"
+            android:inputType="none"
+            android:enabled="false"
+            android:textColor="@color/yellow"/>
+
+
+        <TextView
+            android:id="@+id/fat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Body Fat Percent"
+            android:padding="5dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/yellow"
+            android:fontFamily="@font/nexa_bold"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:id="@+id/fatpercentet"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:drawableStart="@drawable/ic_baseline_donut_large_24"
+            android:drawablePadding="10dp"
+            android:background="@drawable/textbox_rect"
+            android:inputType="none"
+            android:enabled="false"
+            android:textColor="@color/yellow"/>
+
+            <TextView
+                android:id="@+id/resulttv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="According to the result you are obsese"
+                android:drawableStart="@drawable/ic_baseline_lightbulb_24"
+                android:padding="25dp"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/gobtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cornerRadius="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="GO"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black2"
+        android:layout_margin="10dp"
+        android:background="@drawable/circle_btn_shape" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/prevbtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cornerRadius="30dp"
+        android:layout_alignParentBottom="true"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:layout_margin="10dp"
+        android:background="@drawable/circle_btn_shape"
+        android:drawableTint="@color/black2"/>
+
+
+
+
+
+
+</RelativeLayout>

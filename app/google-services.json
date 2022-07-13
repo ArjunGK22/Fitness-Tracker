@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "562924574843",
+    "project_id": "fitnesstracker-e1f3d",
+    "storage_bucket": "fitnesstracker-e1f3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562924574843:android:56b326683ddd29b5e1eade",
+        "android_client_info": {
+          "package_name": "com.example.fitnesstracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562924574843-a3ds2ihdi7p1nnhkj1hd301nbpjjq9me.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV-g582Z9w576ogNDO5YI_ZxjcWHcQgsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562924574843-a3ds2ihdi7p1nnhkj1hd301nbpjjq9me.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

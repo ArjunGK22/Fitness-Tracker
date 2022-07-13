@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MacroCalculator"
+    android:background="@color/black1">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:cardElevation="20dp"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/yellow">
+
+        <RelativeLayout
+            android:id="@+id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageButton
+                android:id="@+id/backbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Macro Calculator"
+                android:textSize="30dp"
+                android:textColor="@color/black2"
+                android:fontFamily="@font/nova_extrabold"
+                android:layout_centerVertical="true"
+                android:textAlignment="center"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Height (in cms)"
+               android:textColor="@color/white"
+               android:fontFamily="@font/nexa_bold"
+               android:textSize="18dp"/>
+
+           <TextView
+               android:id="@+id/heighttv"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAlignment="textEnd"
+               android:text="0"
+               android:textSize="18dp"
+               android:textColor="@color/yellow"
+               android:textStyle="bold"/>
+
+
+       </LinearLayout>
+
+        <SeekBar
+            android:progressBackgroundTint="@color/yellow"
+            android:progressTint="@color/yellow"
+            android:id="@+id/height_seek"
+            android:scaleY="1"
+            android:scaleX="1"
+            android:max="251"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:thumbTint="@color/yellow"
+            android:layout_marginBottom="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight (in Kilograms)"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/weighttv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:text="0"
+                android:textSize="18dp"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/nexa_bold"/>
+
+        </LinearLayout>
+
+        <SeekBar
+            android:progressBackgroundTint="@color/yellow"
+            android:progressTint="@color/yellow"
+            android:id="@+id/weight_seek"
+            android:scaleY="1"
+            android:scaleX="1"
+            android:max="250"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:thumbTint="@color/yellow"
+            android:layout_marginBottom="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity Level"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:fontFamily="@font/nexa_bold"/>
+
+
+          <Spinner
+              android:layout_marginTop="10dp"
+              android:id="@+id/activity_spinner"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:entries="@array/spinner_activity"
+              android:background="@drawable/age_rect"
+              android:padding="15dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age (in years)"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="35dp"/>
+
+        <EditText
+            android:id="@+id/ageet"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/age_rect"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/calculatebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="CALCULATE"
+            android:fontFamily="@font/nexa_bold"
+            android:textColor="@color/black2"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

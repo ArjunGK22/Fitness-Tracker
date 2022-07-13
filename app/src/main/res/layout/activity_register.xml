@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@color/black1">
+
+        <RelativeLayout
+            android:id="@+id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/backbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_iyello"
+                android:background="@null"
+                android:layout_margin="15dp"
+                android:padding="5dp"/>
+
+
+
+            <TextView
+                android:layout_below="@+id/backbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create an\nAccount"
+                android:textSize="40dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/nova_extrabold"
+                android:textStyle="bold"
+                android:textColor="@color/yellow" />
+
+
+        </RelativeLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/nexa_bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/nametv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_account_box_24"
+                android:drawablePadding="10dp"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:layout_marginTop="25dp"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/nexa_bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/usernameet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawablePadding="10dp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/yellow"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:padding="5dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/nexa_bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/passwordet"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="10dp"
+                android:background="@drawable/textbox_rect"
+                android:inputType="textPassword"
+                android:textColor="@color/yellow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirm Password"
+                android:padding="5dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/confpass"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="10dp"
+                android:background="@drawable/textbox_rect"
+                android:inputType="textPassword"
+                android:textColor="@color/yellow" />
+        </LinearLayout>
+
+    </ScrollView>
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_below="@id/scrollable">
+
+
+     <Button
+         android:id="@+id/registerbtn"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Sign Up"
+         android:textSize="18dp"
+         android:fontFamily="@font/nexa_bold"
+         android:textColor="@color/black2"
+         android:textStyle="bold"
+         android:background="@drawable/button_shape"
+         android:layout_marginBottom="15dp"
+         android:layout_margin="30dp"
+         android:padding="10dp"/>
+
+
+     <ProgressBar
+         android:id="@+id/progress"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true"
+         android:elevation="30dp"
+         android:background="@drawable/progress_circle"
+         android:visibility="invisible"
+         android:indeterminateTint="@color/yellow" />
+
+ </RelativeLayout>
+
+
+
+</RelativeLayout>

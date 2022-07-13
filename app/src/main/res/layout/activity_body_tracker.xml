@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BodyTracker"
+    android:background="@color/black1">
+
+    <RelativeLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/yellow"
+        android:padding="15dp"
+        android:elevation="20dp">
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal Details"
+            android:fontFamily="@font/nova_extrabold"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black2"
+            android:textSize="40dp"
+            android:typeface="sans"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Please fill the required details\nto get the result"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_bold"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_title"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age (in years)"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:fontFamily="@font/nexa_bold"/>
+
+            <EditText
+                android:id="@+id/ageet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_account_box_24"
+                android:drawablePadding="10dp"
+                android:textColor="@color/yellow"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Activity"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/nexa_bold"
+                android:textSize="18dp"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:id="@+id/activityet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textColor="@color/yellow"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_directions_bike_24"
+                android:drawablePadding="10dp"
+                android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:layout_marginTop="25dp"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/nexa_bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/heightet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_accessibility_24"
+                android:drawablePadding="10dp"
+                android:textColor="@color/yellow"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Weight"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/nexa_bold"
+                android:textSize="18dp"
+                android:layout_marginTop="25dp"/>
+
+            <EditText
+                android:id="@+id/weightet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_self_improvement_24"
+                android:drawablePadding="10dp"
+                android:textColor="@color/yellow"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Goal Weight"
+                android:layout_marginTop="25dp"
+                android:padding="5dp"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/nexa_bold"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/gweightet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:background="@drawable/textbox_rect"
+                android:drawableStart="@drawable/ic_baseline_accessibility_24"
+                android:drawablePadding="10dp"
+                android:inputType="numberDecimal"
+                android:textColor="@color/yellow"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:padding="5dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/nexa_bold"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/genderet"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_baseline_emoji_emotions_24"
+                android:drawablePadding="10dp"
+                android:background="@drawable/textbox_rect"
+                android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                android:textColor="@color/yellow"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitbtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cornerRadius="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:drawableLeft="@drawable/ic_baseline_arrow_forward_24"
+        android:layout_margin="10dp"
+        android:background="@drawable/circle_btn_shape"/>
+
+
+</RelativeLayout>
